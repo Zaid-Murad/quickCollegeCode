@@ -19,27 +19,29 @@ int main()
 		if (i < 3)
 			continue;
 
-		current = n1 + n2;
-
-		if (current > x)
-		{
-			std::cout << "not found" << std::endl;
-			return 0;
-		}
-
 		else
 		{
-			if (current == x)
+			current = n1 + n2;
+
+			if (current > x)
 			{
-				std::cout << "found" << std::endl;
+				std::cout << "not found" << std::endl;
 				return 0;
 			}
+
 			else
 			{
-				n1 = n2;
-				n2 = current;
+				if (current == x)
+				{
+					std::cout << "found" << std::endl;
+					return 0;
+				}
+				else
+				{
+					n1 = n2;
+					n2 = current;
+				}
 			}
 		}
 	}
-
 }
